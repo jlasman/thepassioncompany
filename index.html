@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iSELF™ | The Waitlist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fetched Oswald for headings and kept Inter for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            overflow: hidden; /* Prevents scrollbars on the embed */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Using DARK BLUE from your color scheme */
+            background-color: #143959;
+            color: #E2E8F0; /* slate-200 */
+        }
+        .container-bg {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100vw;
+            padding: 1rem;
+            padding-top: 15vh;
+            overflow: hidden;
+        }
+        #background-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translateX(-50%) translateY(-50%);
+            opacity: 0.1;
+            filter: blur(10px);
+        }
+        .content-box {
+            position: relative;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem; /* 24px */
+            padding: 2.5rem; /* 40px */
+            max-width: 42rem; /* 672px */
+            width: 100%;
+            text-align: center;
+        }
+        .heading-font {
+             font-family: 'Oswald', sans-serif;
+        }
+        .text-glow {
+            /* Text glow adjusted to match the new headline gradient */
+            text-shadow: 0 0 10px rgba(242, 183, 5, 0.5), 0 0 25px rgba(242, 135, 5, 0.3);
+        }
+        .headline-gradient {
+            /* Gradient using YELLOW and ORANGE */
+            background-image: linear-gradient(120deg, #F2B705, #F28705);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .form-input {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .form-input::placeholder {
+            color: #94a3b8; /* slate-400 */
+        }
+        .form-input:focus {
+            background-color: rgba(255, 255, 255, 0.1);
+            /* Focus border color changed to YELLOW */
+            border-color: #F2B705;
+            /* Focus shadow changed to YELLOW */
+            box-shadow: 0 0 0 3px rgba(242, 183, 5, 0.3);
+            outline: none;
+        }
+        .cta-button {
+            /* Button background changed to BLUE */
+            background: #0367A6;
+            transition: all 0.3s ease;
+            /* Shadow adjusted to a BLUE hue */
+            box-shadow: 0 4px 15px rgba(3, 103, 166, 0.4);
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            /* Hover shadow adjusted to a BLUE hue */
+            box-shadow: 0 8px 25px rgba(3, 103, 166, 0.5);
+        }
+        .cta-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .brand-orange {
+            color: #F28705; /* Orange from your color scheme */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container-bg">
+        <video autoplay muted loop playsinline id="background-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-flowing-particles-on-a-dark-background-4037-large.mp4" type="video/mp4">
+        </video>
+
+        <div class="content-box">
+            <h1 class="heading-font text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-3 text-glow headline-gradient uppercase tracking-wider">Stop Running on Survival Code.</h1>
+             <p class="text-base sm:text-lg text-slate-300 max-w-xl mx-auto mb-8">
+                Humanity is running on a fear-based default OS designed for a world that no longer exists. <strong><span class="brand-orange">iSELF</span></strong> is the command center for installing the upgrade. We are granting access to a select group of architects ready to engineer their inner world.
+            </p>
+
+            <form id="waitlist-form" class="max-w-sm mx-auto">
+                <div class="flex flex-col gap-4">
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required class="form-input w-full px-5 py-3 rounded-lg text-lg focus-ring-0">
+                    <button type="submit" id="submit-button" class="cta-button text-white font-bold py-3 px-8 rounded-lg text-lg w-full uppercase tracking-wider">
+                        Request Early Access
+                    </button>
+                </div>
+                <p id="response-message" class="text-slate-300 mt-4 hidden"></p>
+                <p class="text-xs text-slate-500 mt-4">
+                    By submitting, you agree to receive updates about the iSELF™ launch. No spam. Only signal.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // *** PASTE YOUR GOOGLE APPS SCRIPT URL HERE ***
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwUlteZDC-8oryiEFu-KvktgsxvjriG5MpjSswwaQ6Cu0tY2kCAKsNgM-0LDWs45Oc9HQ/exec';
+
+        const form = document.getElementById('waitlist-form');
+        const emailInput = document.getElementById('email');
+        const submitButton = document.getElementById('submit-button');
+        const responseMessage = document.getElementById('response-message');
+
+        form.addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            if (!emailInput.value || GOOGLE_SCRIPT_URL === '') {
+                responseMessage.textContent = GOOGLE_SCRIPT_URL === '' ? 'Form is not configured.' : 'Please enter a valid email.';
+                responseMessage.className = 'text-red-400 mt-4';
+                responseMessage.style.display = 'block';
+                return;
+            }
+
+            // Disable button to prevent multiple submissions
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+
+            try {
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors', // Important for Google Scripts basic POST
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: emailInput.value })
+                });
+
+                // NOTE: Because of 'no-cors' mode, we can't read the response directly.
+                // We will assume success if the request doesn't throw an error.
+                // The Google Script will handle the actual data processing.
+
+                // Hide the form fields and show the success message
+                form.querySelector('div').style.display = 'none';
+                form.querySelector('p.text-xs').style.display = 'none';
+                responseMessage.textContent = 'Welcome, Architect. Your signal has been received. Prepare for the upgrade.';
+                responseMessage.className = 'text-yellow-500 mt-4';
+                responseMessage.style.display = 'block';
+
+            } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
+                responseMessage.textContent = 'Something went wrong. Please try again.';
+                responseMessage.className = 'text-red-400 mt-4';
+                responseMessage.style.display = 'block';
+                
+                // Re-enable button on error
+                submitButton.disabled = false;
+                submitButton.textContent = 'Request Early Access';
+            }
+        });
+    </script>
+
+</body>
+</html>
+
