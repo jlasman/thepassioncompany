@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The System | The Passion Company</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-red: #BF2431;
+            --color-blue: #0367A6;
+            --color-dark-blue: #143959;
+            --color-yellow: #F2B705;
+            --color-orange: #F28705;
+            --color-neutral-light: #F8F9FA;
+            --color-neutral-dark: #1A1A1A;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-neutral-light);
+            color: var(--color-dark-blue);
+        }
+        .font-oswald { font-family: 'Oswald', sans-serif; }
+        .font-architects { font-family: 'Architects Daughter', cursive; }
+
+        /* Component Styles */
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+        .btn-primary {
+            background-color: var(--color-red);
+            color: white;
+        }
+        .btn-primary:hover {
+            filter: brightness(110%);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header + Navigation (Same as Homepage) -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex-shrink-0">
+                    <a href="index.html" title="Home">
+                        <img src="assets/social-share/TPC Logo transparent.png" alt="The Passion Company Logo" class="h-14 w-auto">
+                    </a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="system.html" class="text-gray-700 hover:text-[var(--color-blue)] font-semibold">The System</a>
+                    <a href="mission.html" class="text-gray-700 hover:text-[var(--color-blue)] font-semibold">The Mission</a>
+                    <a href="manual.html" class="text-gray-700 hover:text-[var(--color-blue)] font-semibold">The Manual</a>
+                </nav>
+                <div class="hidden md:block">
+                    <a href="#" class="btn btn-primary">Book a Discovery Call</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="bg-white text-center py-20 md:py-28 px-6">
+             <div class="container mx-auto">
+                <p class="font-semibold text-[var(--color-blue)] uppercase tracking-widest">The System</p>
+                <h1 class="font-oswald text-4xl md:text-6xl font-bold tracking-tight leading-tight mt-2 text-[var(--color-dark-blue)]">Architect Your Inner Operating System.</h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-600">Our system is not a set of tips or hacks. It is a complete, utility-grade methodology for replacing a flawed internal OS with one that is purpose-built for stability, creativity, and high performance.</p>
+            </div>
+        </section>
+        
+        <!-- The System Components -->
+        <section class="py-20 px-6 bg-[var(--color-neutral-light)]">
+            <div class="container mx-auto space-y-20">
+
+                <!-- Component 1: Imagination Technology -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 md:order-1">
+                        <h2 class="font-oswald text-3xl md:text-4xl font-bold">Imagination Technology: The Methodology</h2>
+                        <p class="mt-4 text-lg text-gray-600">This is the "why" behind the work. Imagination Technology is our proprietary, quantum-inspired methodology—a set of brilliant engineering principles for body, mind, and spirit. It provides the foundational logic for uninstalling fear-based patterns and installing a new OS based on your innate genius.</p>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-[var(--color-blue)] flex-shrink-0 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <span><strong>Systematic Deconstruction:</strong> Safely identify and dismantle the core limitations of the SOTF OS.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-[var(--color-blue)] flex-shrink-0 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <span><strong>Conscious Engineering:</strong> Apply proven principles to architect and build your unique, passion-led operating system.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        
+                        <img src="https://placehold.co/600x450/f8f9fa/143959?text=Methodology+Blueprint" alt="Methodology Blueprint" class="w-full h-full object-cover rounded-lg shadow-md">
+                    </div>
+                </div>
+
+                <!-- Component 2: iSELF Platform -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        
+                         <img src="https://placehold.co/600x450/143959/F8F9FA?text=iSELF+Platform+UI" alt="iSELF Platform UI" class="w-full h-full object-cover rounded-lg shadow-md">
+                    </div>
+                    <div>
+                        <h2 class="font-oswald text-3xl md:text-4xl font-bold">The iSELF Platform: The Delivery</h2>
+                        <p class="mt-4 text-lg text-gray-600">This is the "how" you do the work. The iSELF Platform is our utility-grade product experience that delivers Imagination Technology. It's your interactive dashboard for Conscious Engineering, providing the tools, guidance, and tracking needed to manage your inner world with the same precision as a high-performance system.</p>
+                         <ul class="mt-6 space-y-4">
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-[var(--color-blue)] flex-shrink-0 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <span><strong>Guided Implementation:</strong> Step-by-step modules to guide you through your OS upgrade.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-[var(--color-blue)] flex-shrink-0 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <span><strong>Real-time Diagnostics:</strong> Tools to track your progress and understand your internal state.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- The Core Theories -->
+        <section class="py-20 px-6 bg-white">
+            <div class="container mx-auto">
+                <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="font-oswald text-3xl md:text-4xl font-bold">The Core Theories</h2>
+                    <p class="mt-4 text-lg text-gray-600">Our methodology is grounded in three powerful theories that, when combined, create a limitless internal environment.</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Theory 1 -->
+                    <div class="border border-gray-200 rounded-lg p-8">
+                        <h4 class="font-oswald text-2xl font-semibold">Day One Theory</h4>
+                        <p class="mt-3 text-gray-600">Harnessing the power of <span class="font-semibold text-[var(--color-dark-blue)]">Timelessness</span>. This theory allows you to release the past and heal trauma by treating every moment as a new beginning, free from prior constraints.</p>
+                    </div>
+                    <!-- Theory 2 -->
+                    <div class="border border-gray-200 rounded-lg p-8">
+                        <h4 class="font-oswald text-2xl font-semibold">Blank Slate Theory</h4>
+                        <p class="mt-3 text-gray-600">Accessing the potential of <span class="font-semibold text-[var(--color-dark-blue)]">Emptiness</span>. This theory gives you the freedom to create from a space of pure potential, unburdened by labels and preconceived notions.</p>
+                    </div>
+                    <!-- Theory 3 -->
+                    <div class="border border-gray-200 rounded-lg p-8">
+                        <h4 class="font-oswald text-2xl font-semibold">Quantum Self Theory</h4>
+                        <p class="mt-3 text-gray-600">Realizing the truth of your <span class="font-semibold text-[var(--color-dark-blue)]">Limitlessness</span>. This theory connects you to your inherent genius and mastery, recognizing that you are already complete and capable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Results (Before/After) -->
+        <section class="py-20 px-6">
+            <div class="container mx-auto max-w-5xl">
+                <div class="text-center">
+                    <h2 class="font-oswald text-3xl md:text-4xl font-bold">The Result: A Total System Transformation</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Upgrading your OS changes the foundation of how you experience reality, shifting from a state of limitation to one of limitless potential.</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Before -->
+                    <div class="bg-white border-2 border-red-200 rounded-lg p-8">
+                        <h4 class="font-oswald text-2xl font-semibold text-red-600">Before: "Survival" OS</h4>
+                        <p class="mt-4 text-gray-600">Operating with a system based on fear, scarcity, and self-preservation leads to predictable, limiting outcomes.</p>
+                        <ul class="mt-6 space-y-3 text-gray-700">
+                            <li class="flex items-center"><span class="text-red-500 mr-3">&cross;</span>Stress & Burnout</li>
+                            <li class="flex items-center"><span class="text-red-500 mr-3">&cross;</span>Reactive Decision-Making</li>
+                            <li class="flex items-center"><span class="text-red-500 mr-3">&cross;</span>Creative Blocks</li>
+                            <li class="flex items-center"><span class="text-red-500 mr-3">&cross;</span>Feeling "Stuck"</li>
+                        </ul>
+                    </div>
+                    <!-- After -->
+                    <div class="bg-white border-2 border-green-200 rounded-lg p-8">
+                        <h4 class="font-oswald text-2xl font-semibold text-green-600">After: Passion-Led OS</h4>
+                        <p class="mt-4 text-gray-600">Installing your consciously engineered OS unlocks a new class of capabilities and results.</p>
+                        <ul class="mt-6 space-y-3 text-gray-700">
+                            <li class="flex items-center"><span class="text-green-500 font-bold mr-3">&check;</span>Calm & Stability</li>
+                            <li class="flex items-center"><span class="text-green-500 font-bold mr-3">&check;</span>Intentional Creation</li>
+                            <li class="flex items-center"><span class="text-green-500 font-bold mr-3">&check;</span>Effortless Flow</li>
+                            <li class="flex items-center"><span class="text-green-500 font-bold mr-3">&check;</span>Boundless Potential</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conversion Block (Same as Homepage) -->
+        <section class="py-24 px-6 bg-[var(--color-dark-blue)] text-white">
+            <div class="container mx-auto text-center max-w-2xl">
+                <h2 class="font-oswald text-3xl md:text-4xl font-bold">Begin Your System Upgrade</h2>
+                <p class="mt-4 text-lg opacity-90">The first step is a strategic conversation to map your current operating system and determine if our methodology is the right fit. Schedule your complimentary discovery call today.</p>
+                <div class="mt-10">
+                    <a href="#" class="btn btn-primary text-lg">Book a Discovery Call</a>
+                </div>
+                <p class="mt-8 text-sm opacity-80">We respect your privacy. Your information will not be shared.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as Homepage) -->
+    <footer class="bg-[var(--color-neutral-dark)] text-white">
+        <div class="container mx-auto py-16 px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h5 class="font-oswald text-lg font-semibold tracking-wider">The Passion Company</h5>
+                    <img src="assets/social-share/TPC Logo White Circle.png" class="h-16 w-16 mt-4" alt="TPC White Circle Logo">
+                </div>
+                <div>
+                    <h5 class="font-oswald text-lg font-semibold tracking-wider">Navigate</h5>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="system.html" class="text-gray-400 hover:text-white">The System</a></li>
+                        <li><a href="mission.html" class="text-gray-400 hover:text-white">The Mission</a></li>
+                        <li><a href="manual.html" class="text-gray-400 hover:text-white">The Manual</a></li>
+                         <li><a href="#" class="text-gray-400 hover:text-white">Book a Call</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h5 class="font-oswald text-lg font-semibold tracking-wider">Legal</h5>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-oswald text-lg font-semibold tracking-wider">Stay Connected</h5>
+                    <p class="mt-4 text-gray-400">Get insights on Conscious Engineering delivered to your inbox.</p>
+                    <form class="mt-4 flex">
+                        <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 rounded-l-md text-gray-800 focus:outline-none">
+                        <button class="bg-[var(--color-blue)] px-4 rounded-r-md font-semibold">&rarr;</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-16 pt-8 border-t border-gray-700 text-center text-gray-500">
+                <div class="flex justify-center space-x-6 mb-8">
+                    <!-- Instagram -->
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <span class="sr-only">Instagram</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 012.153 1.153 4.902 4.902 0 011.153 2.153c.247.636.316 1.363.364 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.048 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 2.153 4.902 4.902 0 01-2.153 1.153c-.636.247-1.363.316-2.427.364-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.048-1.791-.218-2.427-.465a4.902 4.902 0 01-2.153-1.153 4.902 4.902 0 01-1.153-2.153c-.247-.636-.316-1.363-.364-2.427C2.013 14.784 2 14.43 2 12s.013-2.784.06-3.808c.048-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-2.153A4.902 4.902 0 015.824.524c.636-.247 1.363-.316 2.427-.364C9.282 2.013 9.636 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm6.406-11.845a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <span class="sr-only">Facebook</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <!-- X -->
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <span class="sr-only">X</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+                <p>&copy; 2025 The Passion Company. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

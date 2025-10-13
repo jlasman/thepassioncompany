@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Passion Company | Earth's First Passion Utility Provider</title>
+    <title>The Mission | The Passion Company</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,15 +42,6 @@
         .btn-primary:hover {
             filter: brightness(110%);
         }
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--color-blue);
-            border: 2px solid var(--color-blue);
-        }
-        .btn-secondary:hover {
-            background-color: var(--color-blue);
-            color: white;
-        }
     </style>
 </head>
 <body class="antialiased">
@@ -59,29 +50,22 @@
     <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <!-- Logo -->
                 <div class="flex-shrink-0">
+                    <a href="index.html" title="Home">
                         <img src="assets/social-share/TPC Logo transparent.png" alt="The Passion Company Logo" class="h-14 w-auto">
+                    </a>
                 </div>
-                
-                <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="system.html" class="text-gray-700 hover:text-[var(--color-blue)] font-semibold">The System</a>
                     <a href="mission.html" class="text-gray-700 hover:text-[var(--color-blue)] font-semibold">The Mission</a>
                     <a href="manual.html" class="text-gray-700 hover:text-[var(--color-blue)] font-semibold">The Manual</a>
                 </nav>
-
-                <!-- Primary CTA -->
                 <div class="hidden md:block">
                     <a href="#" class="btn btn-primary">Book a Discovery Call</a>
                 </div>
-
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden">
                     <button class="text-gray-700 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
                     </button>
                 </div>
             </div>
@@ -89,87 +73,73 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Page Hero -->
         <section class="relative bg-[var(--color-dark-blue)] text-white text-center py-24 md:py-40 px-6 overflow-hidden">
-             <div class="absolute inset-0 bg-black opacity-40"></div>
+             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/143959/143959?text=.');"></div>
+             <div class="absolute inset-0 bg-black opacity-50"></div>
              <div class="relative z-10">
-                <h1 class="font-oswald text-4xl md:text-6xl font-bold tracking-tight leading-tight">Stop Patching Your OS.<br>Install a New One.</h1>
-                <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl opacity-90">You're running on an outdated, fear-based 'Survival of the Fittest' operating system. It's time for an upgrade.</p>
-                <div class="mt-10">
-                    <a href="#" class="btn btn-primary text-lg">Book a Discovery Call</a>
-                </div>
+                <h1 class="font-oswald text-4xl md:text-6xl font-bold tracking-tight leading-tight">To Make Passion a Public Utility.</h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl opacity-90">In an age of accelerating change and artificial intelligence, access to your own passion is no longer a luxury. It is an essential utility, as fundamental as clean water and electricity.</p>
             </div>
         </section>
         
-        <!-- Trust Signals: Logo Bar -->
-        <section class="py-12 bg-white">
-            <div class="container mx-auto px-6">
-                <p class="text-center text-sm font-semibold text-gray-500 uppercase tracking-wider">Trusted by innovators and leaders</p>
-                <div class="mt-8 flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
-                    <img class="h-8" src="https://placehold.co/150x40/f8f9fa/143959?text=CLIENT+LOGO" alt="Client Logo 1">
-                    <img class="h-8" src="https://placehold.co/150x40/f8f9fa/143959?text=CLIENT+LOGO" alt="Client Logo 2">
-                    <img class="h-8" src="https://placehold.co/150x40/f8f9fa/143959?text=CLIENT+LOGO" alt="Client Logo 3">
-                    <img class="h-8" src="https://placehold.co/150x40/f8f9fa/143959?text=CLIENT+LOGO" alt="Client Logo 4">
-                    <img class="h-8" src="https://placehold.co/150x40/f8f9fa/143959?text=CLIENT+LOGO" alt="Client Logo 5">
-                </div>
-            </div>
-        </section>
-
-        <!-- Value Propositions -->
-        <section class="py-20 px-6">
-            <div class="container mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                    <!-- Prop 1 -->
-                    <div>
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-[var(--color-blue)] text-white mx-auto">
-                             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        </div>
-                        <h4 class="mt-6 font-oswald text-2xl font-semibold">Guaranteed Stability</h4>
-                        <p class="mt-2 text-gray-600">Reduce stress and anxiety within 30 days by architecting your unique inner OS.</p>
-                    </div>
-                    <!-- Prop 2 -->
-                    <div>
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-[var(--color-blue)] text-white mx-auto">
-                           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                        </div>
-                        <h4 class="mt-6 font-oswald text-2xl font-semibold">Flow State On-Demand</h4>
-                        <p class="mt-2 text-gray-600">Access higher states of creative flow and peak performance when you need it most.</p>
-                    </div>
-                    <!-- Prop 3 -->
-                    <div>
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-[var(--color-blue)] text-white mx-auto">
-                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
-                        </div>
-                        <h4 class="mt-6 font-oswald text-2xl font-semibold">Conscious Engineering</h4>
-                        <p class="mt-2 text-gray-600">Shift from unconscious reaction to intentional creation with our systematic methodology.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Explainer Block (Narrative Flow) -->
+        <!-- The Vision Section -->
         <section class="py-20 px-6 bg-white">
             <div class="container mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div>
-                        <h2 class="font-oswald text-3xl md:text-4xl font-bold">The Battle for Your Inner World</h2>
-                        <p class="mt-4 text-lg text-gray-600">The "Survival of the Fittest" OS is the default program for humanity. It’s a fear-based system that keeps you in a state of reaction, defense, and limitation. It’s what powers stress, burnout, and self-doubt.</p>
-                        <p class="mt-4 text-lg text-gray-600">Our <span class="font-semibold text-[var(--color-blue)]">Imagination Technology</span> is the systematic upgrade. It provides the tools to uninstall the old code and install a new, passion-led operating system based on Conscious Engineering and self-discovery.</p>
+                        <h2 class="font-oswald text-3xl md:text-4xl font-bold">The Future is Consciously Engineered</h2>
+                        <p class="mt-4 text-lg text-gray-600">Our mission is to empower humanity to make the critical shift from unconscious reaction to intentional creation. The "Survival of the Fittest" OS was built for a world that no longer exists. It is a system that defaults to fear, defense, and limitation—the root causes of stress, burnout, and stagnation.</p>
+                        <p class="mt-4 text-lg text-gray-600">We envision a world where every individual has the tools and understanding to architect their own passion-led inner operating system. A world where human potential is not a finite resource to be managed, but a limitless energy source to be consciously directed.</p>
                     </div>
                     <div class="bg-gray-200 rounded-lg aspect-w-4 aspect-h-3">
-                         <img src="https://placehold.co/600x450/143959/F8F9FA?text=System+Diagram" alt="System Diagram" class="w-full h-full object-cover rounded-lg shadow-md">
+                         
+                         <img src="https://placehold.co/600x450/e0e7ff/143959?text=Flowing+Potential" alt="A clean, flowing river delta from above" class="w-full h-full object-cover rounded-lg shadow-md">
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- Trust Signals (Testimonial) -->
-        <section class="py-20 px-6">
+
+        <!-- Our Manifesto -->
+        <section class="py-20 px-6 bg-[var(--color-neutral-light)]">
+            <div class="container mx-auto">
+                <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="font-oswald text-3xl md:text-4xl font-bold">Our Core Beliefs</h2>
+                    <p class="mt-4 text-lg text-gray-600">This mission is grounded in a set of unwavering principles.</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <!-- Belief 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow">
+                        <h4 class="font-oswald text-2xl font-semibold">Passion is a Utility</h4>
+                        <p class="mt-3 text-gray-600">It is a non-negotiable resource for navigating the future with stability and creativity.</p>
+                    </div>
+                    <!-- Belief 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow">
+                        <h4 class="font-oswald text-2xl font-semibold">Inner World First</h4>
+                        <p class="mt-3 text-gray-600">Your external reality is a direct reflection of your internal operating system. The work starts within.</p>
+                    </div>
+                    <!-- Belief 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow">
+                        <h4 class="font-oswald text-2xl font-semibold">You Are the Architect</h4>
+                        <p class="mt-3 text-gray-600">We don't give you the answers. We give you the brilliant engineering principles to find your own.</p>
+                    </div>
+                    <!-- Belief 4 -->
+                    <div class="bg-white p-8 rounded-lg shadow">
+                        <h4 class="font-oswald text-2xl font-semibold">Utility-Grade Service</h4>
+                        <p class="mt-3 text-gray-600">Conscious evolution deserves the same reliability and systematic precision as our public utilities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Call to Revolution -->
+        <section class="py-20 px-6 bg-white">
             <div class="container mx-auto text-center max-w-3xl">
-                <p class="font-architects text-3xl md:text-4xl text-[var(--color-dark-blue)]">"This isn't just another self-help program. It's a fundamental system reboot for your life and work. The results were immediate and profound."</p>
+                <h2 class="font-oswald text-3xl md:text-4xl font-bold">This is a Revolution, Disguised as a Utility Company.</h2>
+                <p class="mt-6 font-architects text-3xl md:text-4xl text-[var(--color-dark-blue)]">"We are the engineers, the architects, and the system administrators of a new human experience. We are here to provide the clean energy required for the next stage of conscious evolution."</p>
                 <div class="mt-8">
-                    <p class="font-semibold text-lg">Alex Johnson</p>
-                    <p class="text-gray-500">CEO, Future State Inc.</p>
+                    <p class="font-semibold text-lg">Jeremy Lasman</p>
+                    <p class="text-gray-500">Founder & Conscious Engineer</p>
                 </div>
             </div>
         </section>
@@ -177,18 +147,12 @@
         <!-- Conversion Block -->
         <section class="py-24 px-6 bg-[var(--color-dark-blue)] text-white">
             <div class="container mx-auto text-center max-w-2xl">
-                <h2 class="font-oswald text-3xl md:text-4xl font-bold">Ready to Architect Your New OS?</h2>
-                <p class="mt-4 text-lg opacity-90">Book a complimentary discovery call to determine if our system is the right fit for you. No pressure, no sales pitch—just a strategic conversation.</p>
-                <div class="mt-10 bg-white p-8 rounded-lg shadow-2xl">
-                    <!-- Placeholder for Calendly or other scheduler -->
-                    <div class="bg-gray-200 h-40 flex items-center justify-center rounded-md">
-                        <p class="text-gray-500 font-semibold">Scheduler Embed Area</p>
-                    </div>
+                <h2 class="font-oswald text-3xl md:text-4xl font-bold">Join The Mission</h2>
+                <p class="mt-4 text-lg opacity-90">If our vision resonates with you, the next step is a conversation. Let's discuss how you can become a conscious architect of your own life and contribute to the evolution of the collective.</p>
+                <div class="mt-10">
+                    <a href="#" class="btn btn-primary text-lg">Book a Discovery Call</a>
                 </div>
-                <p class="mt-8 text-sm opacity-80">We respect your privacy. Your information will not be shared.</p>
-                <div class="mt-8">
-                    <a href="manual.html" class="text-[var(--color-yellow)] hover:underline font-semibold">Not ready for a call? Download the System Manual to learn more.</a>
-                </div>
+                <p class="mt-8 text-sm opacity-80">Your journey to becoming a pioneer starts here.</p>
             </div>
         </section>
     </main>
@@ -204,7 +168,7 @@
                 <div>
                     <h5 class="font-oswald text-lg font-semibold tracking-wider">Navigate</h5>
                     <ul class="mt-4 space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">The System</a></li>
+                        <li><a href="system.html" class="text-gray-400 hover:text-white">The System</a></li>
                         <li><a href="mission.html" class="text-gray-400 hover:text-white">The Mission</a></li>
                         <li><a href="manual.html" class="text-gray-400 hover:text-white">The Manual</a></li>
                          <li><a href="#" class="text-gray-400 hover:text-white">Book a Call</a></li>
@@ -226,7 +190,7 @@
                     </form>
                 </div>
             </div>
-           <div class="mt-16 pt-8 border-t border-gray-700 text-center text-gray-500">
+            <div class="mt-16 pt-8 border-t border-gray-700 text-center text-gray-500">
                 <div class="flex justify-center space-x-6 mb-8">
                     <!-- Instagram -->
                     <a href="#" class="text-gray-400 hover:text-white">
@@ -253,36 +217,6 @@
             </div>
         </div>
     </footer>
-     <script>
-        const form = document.getElementById('newsletter-form');
-        const statusMessage = document.getElementById('newsletter-status');
-        
-        // IMPORTANT: Replace this with the actual URL you get after deploying the Google Apps Script.
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbw53jMgoRiPwYDUvaBQD_tsZ6EWNSxlp1aDfRUP9rIQNbieTE3a2M9TddpTGG6Wr6itEw/exec';
-
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            statusMessage.textContent = 'Submitting...';
-            statusMessage.style.color = '#F2B705'; // Yellow
-            
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => response.json())
-                .then(data => {
-                    if (data.result === 'success') {
-                        statusMessage.textContent = 'Thank you for subscribing!';
-                        statusMessage.style.color = '#34D399'; // Green
-                        form.reset();
-                    } else {
-                        throw new Error(data.message || 'An unknown error occurred.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error!', error.message);
-                    statusMessage.textContent = 'Error. Please try again.';
-                    statusMessage.style.color = '#EF4444'; // Red
-                });
-        });
-    </script>
 
 </body>
 </html>
