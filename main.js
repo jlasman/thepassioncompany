@@ -138,7 +138,7 @@
       submitBtn.disabled = true;
 
       try {
-        if (APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'YOUR_APPS_SCRIPT_URL_HERE') {
+        if (APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbwdnbS-2ilZCOpe75eE5VJSW1U_TidOLHyqvZHFhOIzTQaTqG_feaqxMm1xN34ZQal2wQ/exec') {
           await fetch(APPS_SCRIPT_URL, {
             method: 'POST',
             mode: 'no-cors',
