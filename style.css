@@ -979,21 +979,27 @@ a, button, [role="button"], input, textarea, select {
   height: 80px;
   margin: 0 auto var(--space-8);
   object-fit: contain;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.1);
+  padding: var(--space-2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .join-title {
   font-size: var(--text-2xl);
   margin-bottom: var(--space-6);
-  color: inherit;
+  color: #FFFFFF;
 }
 
 .join-subtitle {
   font-size: var(--text-base);
-  opacity: 0.75;
+  opacity: 0.85;
   line-height: 1.7;
   margin-bottom: var(--space-10);
   max-width: 55ch;
   margin-inline: auto;
+  color: #C8D6E5;
 }
 
 .join-form {
