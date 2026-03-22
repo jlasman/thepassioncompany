@@ -26,7 +26,14 @@ var EMAIL_SUBJECT = "New Passion Utility Subscriber";
 // Handle POST requests from the form
 function doPost(e) {
   try {
-    var data = JSON.parse(e.postData.contents);
+    // Parse the incoming data (handles both JSON and text/plain content types)
+    var data;
+    try {
+      data = JSON.parse(e.postData.contents);
+    } catch(parseErr) {
+      // If JSON parse fails, try to extract from parameter
+      data = e.parameter || {};
+    }
     var name = data.name || "";
     var email = data.email || "";
     

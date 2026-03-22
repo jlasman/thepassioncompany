@@ -118,7 +118,7 @@
   // === Email form ===
   // IMPORTANT: Replace this URL with your deployed Google Apps Script Web App URL
   // See google-apps-script.js for setup instructions
-  const APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwdnbS-2ilZCOpe75eE5VJSW1U_TidOLHyqvZHFhOIzTQaTqG_feaqxMm1xN34ZQal2wQ/exec';
 
   const form = document.getElementById('joinForm');
   const successMsg = document.getElementById('joinSuccess');
@@ -138,11 +138,11 @@
       submitBtn.disabled = true;
 
       try {
-        if (APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbwdnbS-2ilZCOpe75eE5VJSW1U_TidOLHyqvZHFhOIzTQaTqG_feaqxMm1xN34ZQal2wQ/exec') {
+        if (APPS_SCRIPT_URL) {
+          // Use no-cors to avoid CORS issues with Apps Script redirects
           await fetch(APPS_SCRIPT_URL, {
             method: 'POST',
             mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, email })
           });
         }
@@ -150,7 +150,7 @@
         successMsg.hidden = false;
         successMsg.style.display = 'block';
       } catch (err) {
-        // Even on network errors with no-cors, the request likely went through
+        // With no-cors the request still goes through even if we can't read the response
         form.hidden = true;
         successMsg.hidden = false;
         successMsg.style.display = 'block';
