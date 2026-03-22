@@ -758,6 +758,10 @@ a, button, [role="button"], input, textarea, select {
   margin-bottom: var(--space-4);
 }
 
+.infra-title--iself {
+  text-transform: none;
+}
+
 .infra-description {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
