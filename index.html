@@ -330,10 +330,11 @@
             We're building the infrastructure for Conscious Engineering. If something in this signal resonates — if you recognize patterns in these ideas that reflect your own experience — we invite you to stay connected as the work unfolds.
           </p>
           <form class="join-form" id="joinForm">
-            <div class="join-input-group">
-              <input type="email" placeholder="Your email address" required class="join-input" id="emailInput" aria-label="Email address">
-              <button type="submit" class="btn btn-primary join-submit">Join the Waitlist</button>
+            <div class="join-input-row">
+              <input type="text" placeholder="Your name" required class="join-input" id="nameInput" aria-label="Your name" autocomplete="name">
+              <input type="email" placeholder="Your email address" required class="join-input" id="emailInput" aria-label="Email address" autocomplete="email">
             </div>
+            <button type="submit" class="btn btn-primary join-submit-full">Join the Waitlist</button>
             <p class="join-disclaimer">No urgency. No pressure. Just an open invitation to explore.</p>
           </form>
           <div class="join-success" id="joinSuccess" hidden>

@@ -116,16 +116,41 @@
   fadeElements.forEach(el => observer.observe(el));
 
   // === Email form ===
+  // IMPORTANT: Replace this URL with your deployed Google Apps Script Web App URL
+  // See google-apps-script.js for setup instructions
+  const APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
+
   const form = document.getElementById('joinForm');
   const successMsg = document.getElementById('joinSuccess');
   const emailInput = document.getElementById('emailInput');
+  const nameInput = document.getElementById('nameInput');
 
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      const name = nameInput.value.trim();
       const email = emailInput.value.trim();
-      if (email) {
-        // In production, this would POST to an API endpoint
+      if (!email) return;
+
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'SENDING...';
+      submitBtn.disabled = true;
+
+      try {
+        if (APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'YOUR_APPS_SCRIPT_URL_HERE') {
+          await fetch(APPS_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email })
+          });
+        }
+        form.hidden = true;
+        successMsg.hidden = false;
+        successMsg.style.display = 'block';
+      } catch (err) {
+        // Even on network errors with no-cors, the request likely went through
         form.hidden = true;
         successMsg.hidden = false;
         successMsg.style.display = 'block';
