@@ -1,10 +1,29 @@
+=== index.html ===
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Passion Company — Infrastructure for Exploration</title>
-  <meta name="description" content="The Passion Company builds frameworks and environments for investigating how you participate in the experience of being alive." />
+  <meta name="description" content="The Passion Company builds frameworks and environments for investigating how you participate in the experience of being alive. Not therapy. Not coaching. Infrastructure for exploration." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.thepassioncompany.org/" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.thepassioncompany.org/" />
+  <meta property="og:title" content="The Passion Company — Infrastructure for Exploration" />
+  <meta property="og:description" content="The Passion Company builds frameworks and environments for investigating how you participate in the experience of being alive. Not therapy. Not coaching. Infrastructure for exploration." />
+  <meta property="og:image" content="https://www.thepassioncompany.org/assets/hero-homepage.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Passion Company — Infrastructure for Exploration" />
+  <meta name="twitter:description" content="The Passion Company builds frameworks and environments for investigating how you participate in the experience of being alive. Not therapy. Not coaching. Infrastructure for exploration." />
 
   <!-- Favicons -->
   <link rel="icon" href="assets/favicon.ico" sizes="any" />
@@ -15,6 +34,9 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Preload critical assets -->
+  <link rel="preload" as="image" href="assets/hero-homepage.png" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Oswald:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Oswald:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
@@ -834,6 +856,15 @@
       color: var(--tpc-yellow);
     }
 
+    @media (max-width: 768px) {
+      .reframe-section {
+        padding: var(--space-16) var(--space-5);
+      }
+      .reframe-quote {
+        font-size: var(--text-lg);
+      }
+    }
+
     /* =========================================================
        SECTION 5: WHAT IS PASSION
        ========================================================= */
@@ -1039,6 +1070,18 @@
       }
     }
   </style>
+
+  <!-- HTTPS redirect: only runs on production domain, not localhost -->
+  <script>
+    (function() {
+      var host = window.location.hostname;
+      if (host === 'thepassioncompany.org' || host === 'www.thepassioncompany.org') {
+        if (window.location.protocol !== 'https:') {
+          window.location.replace('https://' + window.location.host + window.location.pathname + window.location.search);
+        }
+      }
+    })();
+  </script>
 </head>
 <body>
 
@@ -1047,17 +1090,17 @@
        ============================================ -->
   <header class="site-header">
     <div class="site-header__inner">
-      <a href="#" class="site-header__logo" aria-label="The Passion Company — Home">
+      <a href="/" class="site-header__logo" aria-label="The Passion Company — Home">
         <img src="assets/The_Passion_Company-01.svg" alt="The Passion Company" class="logo-light" />
         <img src="assets/The_Passion_Company-03.svg" alt="The Passion Company" class="logo-dark" />
       </a>
 
       <nav class="site-nav" aria-label="Main navigation">
         <ul class="site-nav__links" id="navLinks">
-          <li><a href="#" class="site-nav__link">The Work</a></li>
-          <li><a href="#" class="site-nav__link"><span class="brand-iself">iSELF</span></a></li>
-          <li><a href="#" class="site-nav__link">About</a></li>
-          <li><a href="#" class="site-nav__link">Contact</a></li>
+          <li><a href="#the-work" class="site-nav__link">The Work</a></li>
+          <li><a href="#waitlist" class="site-nav__link"><span class="brand-iself">iSELF</span></a></li>
+          <li><a href="#about" class="site-nav__link">About</a></li>
+          <li><a href="#contact" class="site-nav__link">Contact</a></li>
         </ul>
 
         <div class="site-nav__actions">
@@ -1082,7 +1125,7 @@
        ============================================ -->
   <section class="hero">
     <div class="hero__bg">
-      <img src="assets/hero-homepage.png" alt="" loading="eager" />
+      <img src="assets/hero-homepage.png" alt="" loading="eager" fetchpriority="high" />
     </div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
@@ -1104,11 +1147,13 @@
           </div>
         </div>
         <div class="problem-content reveal">
-          <h2 class="section__headline">You're already participating.</h2>
+          <h2 class="section__headline">You’re already participating.</h2>
           <div class="section__body">
-            <p>Every moment of your life, you are actively participating in how your experience unfolds — through attention, interpretation, imagination, and response. Most of this happens automatically, shaped by patterns you inherited long before you had any say in the matter.</p>
-            <p>These patterns aren't broken. They're adaptive. They kept your ancestors alive. But they also narrow what feels possible — collapsing uncertainty into threat, fusing identity with thought, and making experience feel fixed, personal, and unavoidable.</p>
-            <p>What if participation itself could become visible? Not fixed — but navigable?</p>
+            <p>Every moment, you are actively participating in how your experience unfolds — through attention, interpretation, imagination, and response. Most of this happens automatically, shaped by patterns inherited long before you had any say in the matter.</p>
+            <p>These patterns aren’t broken. They’re adaptive. But they also narrow what feels possible — collapsing uncertainty into threat, fusing identity with thought, making experience feel fixed, personal, and unavoidable.</p>
+            <p>TPC builds infrastructure to make that participation visible. Not to fix it. To make it navigable.</p>
+            <p>The investigative framework is called <strong>Imagination Technology</strong> — a working experimental system for exploring how awareness, imagination, and participation interact within lived experience. Not philosophy. Not belief. A set of testable lenses you engage through your own observation.</p>
+            <p>Each lens begins with a simple invitation: <em>imagine if this were true — and observe what changes.</em></p>
           </div>
         </div>
       </div>
@@ -1219,24 +1264,24 @@
   </section>
 
   <!-- ============================================
-       FOOTER
+       FOOTER (anchors: #about and #contact)
        ============================================ -->
-  <footer class="site-footer">
+  <footer class="site-footer" id="about">
     <div class="site-footer__inner">
       <div class="footer-brand">
         <div class="footer-brand__logo">
-          <img src="assets/The_Passion_Company-04.svg" alt="The Passion Company" class="logo-light" />
-          <img src="assets/The_Passion_Company-06.svg" alt="The Passion Company" class="logo-dark" />
+          <img src="assets/The_Passion_Company-04.svg" alt="The Passion Company" class="logo-light" loading="lazy" />
+          <img src="assets/The_Passion_Company-06.svg" alt="The Passion Company" class="logo-dark" loading="lazy" />
         </div>
         <p class="footer-brand__tagline">Earth's First Passion Utility</p>
       </div>
 
       <div class="footer-nav">
         <ul class="footer-nav__links">
-          <li><a href="#" class="footer-nav__link">The Work</a></li>
-          <li><a href="#" class="footer-nav__link"><span class="brand-iself">iSELF</span></a></li>
-          <li><a href="#" class="footer-nav__link">About</a></li>
-          <li><a href="#" class="footer-nav__link">Contact</a></li>
+          <li><a href="#the-work" class="footer-nav__link">The Work</a></li>
+          <li><a href="#waitlist" class="footer-nav__link"><span class="brand-iself">iSELF</span></a></li>
+          <li><a href="#about" class="footer-nav__link">About</a></li>
+          <li><a href="#contact" class="footer-nav__link">Contact</a></li>
         </ul>
 
         <div class="footer-social">
@@ -1262,7 +1307,7 @@
       </div>
     </div>
 
-    <div class="footer-bottom">
+    <div class="footer-bottom" id="contact">
       <p class="footer-legal">&copy; 2026 The Passion Company. All rights reserved.</p>
       <p class="footer-disclaimer">The Passion Company does not provide therapy, clinical services, or medical advice. All frameworks are presented as experimental lenses, not prescriptive systems.</p>
     </div>
@@ -1310,7 +1355,15 @@
       const links = document.getElementById('navLinks');
       if (btn && links) {
         btn.addEventListener('click', function() {
-          links.classList.toggle('is-open');
+          const isOpen = links.classList.toggle('is-open');
+          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        // Close mobile nav when any nav link is tapped
+        links.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            links.classList.remove('is-open');
+            btn.setAttribute('aria-expanded', 'false');
+          });
         });
       }
     })();
