@@ -505,7 +505,7 @@
       reveals.forEach(function(el) { observer.observe(el); });
     })();
 
-    /* Contact form → mailto fallback (fetch to Formspree-style endpoint or mailto) */
+    /* Contact form → Formspree (server-side delivery, no mail client) */
     (function() {
       const form = document.getElementById('contactForm');
       const success = document.getElementById('contactSuccess');
@@ -527,23 +527,30 @@
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
 
-        /* Use mailto as the delivery mechanism for a static site */
-        const subject = encodeURIComponent('Message from ' + (name || email));
-        const body = encodeURIComponent(
-          'Name: ' + (name || '—') + '\n' +
-          'Email: ' + email + '\n\n' +
-          message
-        );
+        try {
+          const res = await fetch('https://formspree.io/contact@thepassioncompany.org', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({ name: name, email: email, message: message })
+          });
 
-        /* Open mail client */
-        window.location.href = 'mailto:contact@thepassioncompany.org?subject=' + subject + '&body=' + body;
-
-        /* Show inline confirmation after a short delay */
-        setTimeout(function() {
-          form.style.display = 'none';
-          document.querySelector('.contact-footer-note').style.display = 'none';
-          success.classList.add('is-visible');
-        }, 800);
+          if (res.ok) {
+            form.style.display = 'none';
+            const note = document.querySelector('.contact-footer-note');
+            if (note) note.style.display = 'none';
+            success.classList.add('is-visible');
+          } else {
+            throw new Error('Status ' + res.status);
+          }
+        } catch (err) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send It';
+          console.error('Form error:', err);
+          alert('Something went wrong. Please email us directly at contact@thepassioncompany.org.');
+        }
       });
     })();
   </script>
