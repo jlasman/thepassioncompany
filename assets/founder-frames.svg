@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" fill="none" aria-label="Founder photo layout">
+  <!--
+    Founder Photo Frames — Asymmetric Layout
+    Two founder placeholders with staggered positioning.
+    Not a cookie-cutter grid. Intentional visual tension.
+    Drop these as clip-path containers or overlay actual photos.
+  -->
+  <defs>
+    <clipPath id="frame1">
+      <rect x="40" y="40" width="360" height="400" rx="8"/>
+    </clipPath>
+    <clipPath id="frame2">
+      <rect x="520" y="80" width="400" height="360" rx="8"/>
+    </clipPath>
+  </defs>
+
+  <!-- Frame 1: Taller, left-aligned, slightly higher -->
+  <g clip-path="url(#frame1)">
+    <rect x="40" y="40" width="360" height="400" rx="8" fill="#EDEBE6"/>
+    <!-- Geometric placeholder pattern -->
+    <line x1="40" y1="240" x2="400" y2="240" stroke="#D6D3CC" stroke-width="1"/>
+    <line x1="220" y1="40" x2="220" y2="440" stroke="#D6D3CC" stroke-width="1"/>
+    <circle cx="220" cy="200" r="60" stroke="#B8B5AE" stroke-width="1.5" fill="none"/>
+    <circle cx="220" cy="200" r="30" stroke="#B8B5AE" stroke-width="1" fill="none"/>
+    <text x="220" y="320" text-anchor="middle" font-family="'Oswald', sans-serif" font-size="12" font-weight="500" letter-spacing="0.1em" fill="#8A877F" text-transform="uppercase">FOUNDER 01</text>
+    <text x="220" y="340" text-anchor="middle" font-family="'Work Sans', sans-serif" font-size="11" fill="#8A877F">Jeremy Lasman</text>
+  </g>
+  <rect x="40" y="40" width="360" height="400" rx="8" stroke="#D6D3CC" stroke-width="1.5" fill="none"/>
+  <!-- Accent bar: Red -->
+  <rect x="40" y="40" width="360" height="4" rx="2" fill="#BF2431"/>
+
+  <!-- Frame 2: Wider, right-offset, dropped lower -->
+  <g clip-path="url(#frame2)">
+    <rect x="520" y="80" width="400" height="360" rx="8" fill="#EDEBE6"/>
+    <line x1="520" y1="260" x2="920" y2="260" stroke="#D6D3CC" stroke-width="1"/>
+    <line x1="720" y1="80" x2="720" y2="440" stroke="#D6D3CC" stroke-width="1"/>
+    <circle cx="720" cy="230" r="60" stroke="#B8B5AE" stroke-width="1.5" fill="none"/>
+    <circle cx="720" cy="230" r="30" stroke="#B8B5AE" stroke-width="1" fill="none"/>
+    <text x="720" y="350" text-anchor="middle" font-family="'Oswald', sans-serif" font-size="12" font-weight="500" letter-spacing="0.1em" fill="#8A877F" text-transform="uppercase">FOUNDER 02</text>
+    <text x="720" y="370" text-anchor="middle" font-family="'Work Sans', sans-serif" font-size="11" fill="#8A877F">Co-Founder Name</text>
+  </g>
+  <rect x="520" y="80" width="400" height="360" rx="8" stroke="#D6D3CC" stroke-width="1.5" fill="none"/>
+  <!-- Accent bar: Blue -->
+  <rect x="520" y="80" width="400" height="4" rx="2" fill="#0367A6"/>
+
+  <!-- Connecting element: subtle diagonal line linking the two frames -->
+  <line x1="400" y1="280" x2="520" y2="220" stroke="#D6D3CC" stroke-width="1" stroke-dasharray="6,4"/>
+</svg>
