@@ -528,13 +528,19 @@
         submitBtn.textContent = 'Sending...';
 
         try {
-          const res = await fetch('https://formspree.io/contact@thepassioncompany.org', {
+          const res = await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
               'Accept': 'application/json'
             },
-            body: JSON.stringify({ name: name, email: email, message: message })
+            body: JSON.stringify({
+              access_key: '2ccd8b33-d243-4243-8314-e6a20d6399b9',
+              name: name,
+              email: email,
+              message: message,
+              subject: 'New message from thepassioncompany.org'
+            })
           });
 
           if (res.ok) {
