@@ -1097,13 +1097,13 @@
       <nav class="site-nav" aria-label="Main navigation">
         <ul class="site-nav__links" id="navLinks">
           <li><a href="/the-work.html" class="site-nav__link">The Work</a></li>
-          <li><a href="#waitlist" class="site-nav__link"><span class="brand-iself">iSELF</span></a></li>
+          <li><a href="/iself.html" class="site-nav__link"><span class="brand-iself">iSELF</span></a></li>
           <li><a href="#about" class="site-nav__link">About</a></li>
-          <li><a href="#contact" class="site-nav__link">Contact</a></li>
+          <li><a href="/contact.html" class="site-nav__link">Contact</a></li>
         </ul>
 
         <div class="site-nav__actions">
-          <a href="#waitlist" class="btn btn--primary btn--sm">Explore <span class="brand-iself">iSELF</span></a>
+          <a href="/iself.html" class="btn btn--primary btn--sm">Explore <span class="brand-iself">iSELF</span></a>
 
           <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1237,7 +1237,7 @@
           </div>
         </div>
 
-        <form class="waitlist-form reveal" onsubmit="event.preventDefault(); alert('Thank you! We\'ll be in touch.');">
+        <form class="waitlist-form reveal" id="waitlistForm" novalidate>
           <div class="form-group">
             <label class="form-label" for="firstName">First Name</label>
             <input class="form-input" type="text" id="firstName" name="firstName" placeholder="Your first name" required />
@@ -1253,8 +1253,9 @@
             <textarea class="form-input form-textarea" id="message" name="message" placeholder="Curiosity, a friend's recommendation, something else..."></textarea>
           </div>
 
-          <button type="submit" class="btn btn--dark btn--lg">Join the Waitlist</button>
-          <p class="waitlist-form__disclaimer">No spam. No pressure. Just an open line for when the environment is ready.</p>
+          <button type="submit" class="btn btn--dark btn--lg" id="waitlistSubmit">Join the Waitlist</button>
+          <p class="waitlist-form__disclaimer" id="waitlistDisclaimer">No spam. No pressure. Just an open line for when the environment is ready.</p>
+          <div id="waitlistSuccess" style="display:none; padding: var(--space-6); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); text-align:center;"><p style="font-family: var(--font-body); color: var(--color-text-secondary);">You're in the lab. We'll be in touch when the environment opens.</p></div>
         </form>
       </div>
     </div>
@@ -1276,9 +1277,9 @@
       <div class="footer-nav">
         <ul class="footer-nav__links">
           <li><a href="/the-work.html" class="footer-nav__link">The Work</a></li>
-          <li><a href="#waitlist" class="footer-nav__link"><span class="brand-iself">iSELF</span></a></li>
+          <li><a href="/iself.html" class="footer-nav__link"><span class="brand-iself">iSELF</span></a></li>
           <li><a href="#about" class="footer-nav__link">About</a></li>
-          <li><a href="#contact" class="footer-nav__link">Contact</a></li>
+          <li><a href="/contact.html" class="footer-nav__link">Contact</a></li>
         </ul>
 
         <div class="footer-social">
@@ -1385,6 +1386,61 @@
       }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
       reveals.forEach(function(el) { observer.observe(el); });
+    })();
+
+    /* =========================================================
+       WAITLIST FORM → MAILERLITE
+       ========================================================= */
+    (function() {
+      var form = document.getElementById('waitlistForm');
+      var success = document.getElementById('waitlistSuccess');
+      var submitBtn = document.getElementById('waitlistSubmit');
+      var disclaimer = document.getElementById('waitlistDisclaimer');
+      if (!form) return;
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var email = form.querySelector('#email').value.trim();
+        if (!email) { form.querySelector('#email').focus(); return; }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        var firstName = form.querySelector('#firstName').value.trim();
+        var message = form.querySelector('#message').value.trim();
+
+        var payload = {
+          email: email,
+          fields: { name: firstName || null, response: message || null },
+          groups: ['185111681208157681']
+        };
+
+        fetch('https://connect.mailerlite.com/api/subscribers', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiNzJkNTViN2RlMDBhYTJhNjg1NTc3Zjk2ODNiNThiMzdhMzU3Zjc1MDQxODBlZDkwMTBmOWNiMTMwNGExZDcyMTdmYTlkOTIxZTI0YmQwNWUiLCJpYXQiOjE3NzY1NDQyODkuNTkwNzEyLCJuYmYiOjE3NzY1NDQyODkuNTkwNzE0LCJleHAiOjQ5MzIyMTc4ODkuNTg0MjA5LCJzdWIiOiIyMjgxNzkxIiwic2NvcGVzIjpbXX0.WfG8dZOpn0E4r5otpr50n3A71Boq5hBU7SVdZf0GgshhKPFp5Pv6cQ9bgv1lvH1LizcSW2cfLih74rgbc6kE1-cj3O5AZdsIRQuNf7lBWTwSG0oSckBrkTF2kX9qocSWW9bbljaY9BDGCRY1eY0SUGDKg85GDoeRDCAi_gwkoZ1lc7bCihUz3gS3NfIJa5hl1t7S9dCFwhqT0O-VOBJmXplCpcxO2b66VsYxq9n3Sl1SAthTVLkzA5lHtDfjxAIFJICMtOTafR1ssm7Gi3Fnh7kLe0SYR_GmhPGLfL5d0L_Lr7qGVTe5knfOqYBUgHYx_sV25yf6Q2oGLcn86Mb60Dzwt1OpEkoBIlDJQ2BwY51B-IjG-yWuDHEQrkA7yz6KbG-0P1fxoAzLk5XWXJru3d4RojwNcTlhSj8Ap_nKM09t2gnvLo8dqVjbZVJTTcVLwsPhLbDsvTB_EvSnBQSdqTd8uFBO2adTZ18EznzbwMClCwxreL2GXdps8GaeGjV6dLocFo3QMZ4bwOPlStNZNATWr5ZHc18SSsYVieMYQ30fPpBBn5RfL1a3S3y7yEdfU-12D2refPiMe8-H3IkP3ec7NqCfyUeAH9hBJv-CN3hN8LbySLZ5jHWopA7Eyr83mfVGt9bRtWM6s-tBLjByiBgCK4ShimLvLdQTcimF1xc',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        })
+        .then(function(res) {
+          if (res.ok || res.status === 409) {
+            form.querySelectorAll('.form-group').forEach(function(g) { g.style.display = 'none'; });
+            submitBtn.style.display = 'none';
+            if (disclaimer) disclaimer.style.display = 'none';
+            success.style.display = 'block';
+          } else {
+            throw new Error('Status ' + res.status);
+          }
+        })
+        .catch(function(err) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Join the Waitlist';
+          console.error('MailerLite error:', err);
+          alert('Something went wrong. Please try again or email us at hello@thepassioncompany.org.');
+        });
+      });
     })();
   </script>
 
