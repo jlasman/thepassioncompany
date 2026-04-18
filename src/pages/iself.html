@@ -1,0 +1,173 @@
+<!-- CONFIG {
+  "output": "iself.html",
+  "active": "iself",
+  "nav_cta": "<a href=\"#waitlist\" class=\"btn btn--primary btn--sm\">Join Waitlist</a>"
+} -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iSELF — The Passion Company</title>
+  <meta name="description" content="iSELF is a laboratory for investigating your own experience. You bring your attention. The environment provides the structure. What you observe is yours." />
+  <link rel="canonical" href="https://www.thepassioncompany.org/iself.html" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.thepassioncompany.org/iself.html" />
+  <meta property="og:title" content="iSELF — A Laboratory for Investigating Your Own Experience" />
+  <meta property="og:description" content="iSELF is where the frameworks of Imagination Technology become directly explorable. Not conceptually — experientially." />
+  <meta property="og:image" content="https://www.thepassioncompany.org/assets/hero-homepage.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="iSELF — A Laboratory for Investigating Your Own Experience" />
+  <meta name="twitter:description" content="iSELF is where the frameworks of Imagination Technology become directly explorable. Not conceptually — experientially." />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="assets/favicon-16.png" type="image/png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Oswald:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Oswald:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    {{shared_css}}
+
+    /* =========================================================
+       PAGE-SPECIFIC: iSELF
+       ========================================================= */
+    .page-main { min-height: calc(100dvh - 8rem); }
+
+    .iself-hero {
+      padding: var(--space-32) var(--space-6) var(--space-16);
+      max-width: var(--content-narrow);
+      margin: 0 auto;
+      text-align: center;
+    }
+    .iself-hero__eyebrow {
+      font-family: var(--font-display); font-weight: 500; font-size: var(--text-xs);
+      text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-text-tertiary);
+      margin-bottom: var(--space-6);
+    }
+    .iself-hero__title {
+      font-family: var(--font-display); font-weight: 700; font-size: var(--text-3xl);
+      text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-text);
+      line-height: 1; margin-bottom: var(--space-6);
+    }
+    .iself-hero__sub {
+      font-family: var(--font-accent); font-size: var(--text-lg);
+      color: var(--color-text-secondary); line-height: 1.5; margin-bottom: var(--space-8);
+    }
+    .iself-body {
+      max-width: var(--content-narrow); margin: 0 auto;
+      padding: 0 var(--space-6) var(--space-16); text-align: center;
+    }
+    .iself-body__text {
+      font-family: var(--font-body); font-size: var(--text-base);
+      line-height: 1.8; color: var(--color-text-secondary); margin-bottom: var(--space-12);
+    }
+    .iself-body__divider {
+      width: 48px; height: 2px; background: var(--color-primary);
+      margin: 0 auto var(--space-12); border: none;
+    }
+    .iself-waitlist {
+      max-width: var(--content-narrow); margin: 0 auto;
+      padding: 0 var(--space-6) var(--space-32); text-align: center;
+    }
+    .iself-waitlist__form { display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-4); }
+    .iself-waitlist__row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+    .iself-waitlist__micro { font-family: var(--font-accent); font-size: var(--text-sm); color: var(--color-text-tertiary); line-height: 1.5; }
+    .iself-waitlist__success {
+      display: none; padding: var(--space-6); background: var(--color-surface);
+      border: 1px solid var(--color-border); border-radius: var(--radius-md); text-align: center;
+    }
+    .iself-waitlist__success.is-visible { display: block; }
+    .iself-waitlist__success p { font-family: var(--font-body); color: var(--color-text-secondary); font-size: var(--text-base); }
+    @media (max-width: 540px) { .iself-waitlist__row { grid-template-columns: 1fr; } }
+  </style>
+  <script>(function(){var h=window.location.hostname;if(h==='thepassioncompany.org'||h==='www.thepassioncompany.org'){if(window.location.protocol!=='https:'){window.location.replace('https://'+window.location.host+window.location.pathname+window.location.search);}}}());</script>
+</head>
+<body>
+
+{{header}}
+
+  <main class="page-main">
+    <section class="iself-hero">
+      <div class="reveal">
+        <p class="iself-hero__eyebrow">The Environment</p>
+        <h1 class="iself-hero__title"><span class="brand-iself">iSELF</span></h1>
+        <p class="iself-hero__sub">A laboratory for investigating your own experience.</p>
+      </div>
+    </section>
+
+    <section class="iself-body">
+      <span class="tag tag--red reveal">Exploration</span>
+      <p class="iself-body__text reveal" style="margin-top: var(--space-8);">
+        <span class="brand-iself">iSELF</span> is where the frameworks of Imagination Technology become
+        directly explorable. Not conceptually — experientially. You bring your attention.
+        The environment provides the structure. What you observe is yours.
+      </p>
+      <hr class="iself-body__divider reveal" />
+    </section>
+
+    <section class="iself-waitlist" id="waitlist">
+      <div class="reveal">
+        <div class="iself-waitlist__success" id="waitlistSuccess">
+          <p>You're in the lab. We'll be in touch when the environment opens.</p>
+        </div>
+        <form class="iself-waitlist__form" id="waitlistForm" novalidate>
+          <div class="iself-waitlist__row">
+            <div class="form-group">
+              <label class="form-label" for="firstName">First Name</label>
+              <input class="form-input" type="text" id="firstName" name="firstName" placeholder="Your name" autocomplete="given-name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">What draws you here? <span style="opacity:0.5;font-size:0.85em;">(optional)</span></label>
+            <textarea class="form-input form-textarea" id="message" name="message" placeholder="No wrong answers."></textarea>
+          </div>
+          <button type="submit" class="btn btn--dark btn--lg" id="waitlistSubmit">Join the Waitlist</button>
+        </form>
+        <p class="iself-waitlist__micro">No obligation. No prescribed outcome. Just an open lab.</p>
+      </div>
+    </section>
+  </main>
+
+{{footer}}
+
+{{scripts}}
+  <script>
+    /* Waitlist form → MailerLite */
+    (function() {
+      var form = document.getElementById('waitlistForm');
+      var success = document.getElementById('waitlistSuccess');
+      var submitBtn = document.getElementById('waitlistSubmit');
+      if (!form) return;
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        var email = form.querySelector('#email').value.trim();
+        if (!email) { form.querySelector('#email').focus(); return; }
+        submitBtn.disabled = true; submitBtn.textContent = 'Sending...';
+        var firstName = form.querySelector('#firstName').value.trim();
+        var message = form.querySelector('#message').value.trim();
+        try {
+          var res = await fetch('https://connect.mailerlite.com/api/subscribers', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiNzJkNTViN2RlMDBhYTJhNjg1NTc3Zjk2ODNiNThiMzdhMzU3Zjc1MDQxODBlZDkwMTBmOWNiMTMwNGExZDcyMTdmYTlkOTIxZTI0YmQwNWUiLCJpYXQiOjE3NzY1NDQyODkuNTkwNzEyLCJuYmYiOjE3NzY1NDQyODkuNTkwNzE0LCJleHAiOjQ5MzIyMTc4ODkuNTg0MjA5LCJzdWIiOiIyMjgxNzkxIiwic2NvcGVzIjpbXX0.WfG8dZOpn0E4r5otpr50n3A71Boq5hBU7SVdZf0GgshhKPFp5Pv6cQ9bgv1lvH1LizcSW2cfLih74rgbc6kE1-cj3O5AZdsIRQuNf7lBWTwSG0oSckBrkTF2kX9qocSWW9bbljaY9BDGCRY1eY0SUGDKg85GDoeRDCAi_gwkoZ1lc7bCihUz3gS3NfIJa5hl1t7S9dCFwhqT0O-VOBJmXplCpcxO2b66VsYxq9n3Sl1SAthTVLkzA5lHtDfjxAIFJICMtOTafR1ssm7Gi3Fnh7kLe0SYR_GmhPGLfL5d0L_Lr7qGVTe5knfOqYBUgHYx_sV25yf6Q2oGLcn86Mb60Dzwt1OpEkoBIlDJQ2BwY51B-IjG-yWuDHEQrkA7yz6KbG-0P1fxoAzLk5XWXJru3d4RojwNcTlhSj8Ap_nKM09t2gnvLo8dqVjbZVJTTcVLwsPhLbDsvTB_EvSnBQSdqTd8uFBO2adTZ18EznzbwMClCwxreL2GXdps8GaeGjV6dLocFo3QMZ4bwOPlStNZNATWr5ZHc18SSsYVieMYQ30fPpBBn5RfL1a3S3y7yEdfU-12D2refPiMe8-H3IkP3ec7NqCfyUeAH9hBJv-CN3hN8LbySLZ5jHWopA7Eyr83mfVGt9bRtWM6s-tBLjByiBgCK4ShimLvLdQTcimF1xc', 'Accept': 'application/json' },
+            body: JSON.stringify({ email: email, fields: { name: firstName||null, response: message||null }, groups: ['185111681208157681'] })
+          });
+          if (res.ok || res.status === 409) {
+            form.style.display = 'none'; success.classList.add('is-visible');
+          } else { throw new Error('Status ' + res.status); }
+        } catch(err) {
+          submitBtn.disabled = false; submitBtn.textContent = 'Join the Waitlist';
+          alert('Something went wrong. Please try again or email us at hello@thepassioncompany.org.');
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

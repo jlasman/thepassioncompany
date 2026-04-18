@@ -1,0 +1,338 @@
+<!-- CONFIG {
+  "output": "the-work.html",
+  "active": "the-work",
+  "logo_dark": "The_Passion_Company-02.svg"
+} -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Work — Imagination Technology | The Passion Company</title>
+  <meta name="description" content="Imagination Technology is an experimental framework for investigating how you participate in the experience of being alive. Not philosophy. Not belief. Working hypotheses. Testable lenses." />
+  <link rel="canonical" href="https://www.thepassioncompany.org/the-work.html" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.thepassioncompany.org/the-work.html" />
+  <meta property="og:title" content="The Work — Imagination Technology | The Passion Company" />
+  <meta property="og:description" content="Imagination Technology is an experimental framework for investigating how you participate in the experience of being alive. Not philosophy. Not belief." />
+  <meta property="og:image" content="https://www.thepassioncompany.org/assets/hero-homepage.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Work — Imagination Technology | The Passion Company" />
+  <meta name="twitter:description" content="An experimental framework for investigating how you participate in the experience of being alive." />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="assets/favicon-16.png" type="image/png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Oswald:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Oswald:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    {{shared_css}}
+
+    /* =========================================================
+       PAGE-SPECIFIC: THE WORK
+       ========================================================= */
+
+    /* PAGE HERO */
+    .page-hero { background: var(--tpc-dark-blue); padding: var(--space-32) var(--space-6) var(--space-24); position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 50%, rgba(3,103,166,0.25) 0%, transparent 70%); pointer-events: none; }
+    .page-hero__inner { max-width: var(--content-default); margin: 0 auto; position: relative; z-index: 1; }
+    .page-hero__eyebrow { font-family: var(--font-display); font-weight: 500; font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.14em; color: var(--tpc-yellow); margin-bottom: var(--space-4); }
+    .page-hero__headline { font-family: var(--font-display); font-weight: 700; font-size: var(--text-3xl); text-transform: uppercase; letter-spacing: 0.02em; color: #FFFFFF; line-height: 1.05; margin-bottom: var(--space-6); }
+    .page-hero__subhead { font-family: var(--font-body); font-size: var(--text-lg); font-weight: 300; color: rgba(255,255,255,0.75); line-height: 1.7; max-width: 58ch; margin-bottom: var(--space-4); }
+    .page-hero__note { font-family: var(--font-accent); font-size: var(--text-base); color: rgba(255,255,255,0.45); font-style: italic; }
+    @media (max-width: 768px) {
+      .page-hero { padding: var(--space-20) var(--space-5) var(--space-16); }
+      .page-hero__headline { font-size: var(--text-2xl); }
+    }
+
+    /* SECTION LAYOUT */
+    .section { padding: var(--space-24) var(--space-6); }
+    .section--surface { background: var(--color-surface); border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); }
+    .section--dark { background: var(--tpc-dark-blue); }
+    .section__inner { max-width: var(--content-default); margin: 0 auto; }
+    .section__inner--wide { max-width: var(--content-wide); margin: 0 auto; }
+
+    /* DIVIDER */
+    .divider--accent { width: 48px; height: 3px; background: var(--tpc-red); border: none; margin: 0 0 var(--space-8); }
+
+    /* TAGS */
+    .tag { display: inline-flex; align-items: center; font-family: var(--font-display); font-weight: 500; font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.1em; padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); }
+    .tag--red { background: rgba(191,36,49,0.12); color: var(--tpc-red); }
+    .tag--blue { background: rgba(3,103,166,0.12); color: var(--tpc-blue); }
+    [data-theme="dark"] .tag--red { background: rgba(224,97,109,0.15); color: #E0616D; }
+    [data-theme="dark"] .tag--blue { background: rgba(95,174,214,0.15); color: #5FAED6; }
+    .tags { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-6); }
+
+    /* SECTION 1 — WHAT IT IS */
+    .what-it-is__headline { font-family: var(--font-display); font-weight: 700; font-size: var(--text-xl); text-transform: uppercase; letter-spacing: 0.02em; color: var(--color-text); margin-bottom: var(--space-6); line-height: 1.15; }
+    .what-it-is__body { font-family: var(--font-body); font-size: var(--text-base); color: var(--color-text-secondary); line-height: 1.8; max-width: 64ch; }
+    .what-it-is__body p + p { margin-top: var(--space-5); }
+    .what-it-is__invitation { margin-top: var(--space-10); padding: var(--space-8) var(--space-8) var(--space-8) var(--space-10); border-left: 3px solid var(--tpc-red); background: var(--color-surface-inset); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+    .what-it-is__invitation p { font-family: var(--font-accent); font-size: var(--text-lg); color: var(--color-text); line-height: 1.6; max-width: none; }
+    .what-it-is__invitation strong { color: var(--color-primary); font-style: normal; }
+
+    /* SECTION 2 — SIMULATION LENS */
+    .sim-lens { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: start; }
+    .sim-lens__label { font-family: var(--font-display); font-weight: 500; font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.14em; color: var(--color-text-tertiary); margin-bottom: var(--space-3); }
+    .sim-lens__headline { font-family: var(--font-display); font-weight: 700; font-size: var(--text-xl); text-transform: uppercase; letter-spacing: 0.02em; color: var(--color-text); margin-bottom: var(--space-6); line-height: 1.15; }
+    .sim-lens__body { font-family: var(--font-body); font-size: var(--text-base); color: var(--color-text-secondary); line-height: 1.8; }
+    .sim-lens__body p + p { margin-top: var(--space-5); }
+    .sim-lens__questions { background: var(--color-surface-raised); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-8); box-shadow: var(--shadow-sm); }
+    .sim-lens__questions-title { font-family: var(--font-display); font-weight: 600; font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-tertiary); margin-bottom: var(--space-5); }
+    .sim-lens__questions ul { list-style: none; display: flex; flex-direction: column; gap: var(--space-4); }
+    .sim-lens__questions li { font-family: var(--font-body); font-size: var(--text-base); color: var(--color-text); line-height: 1.5; padding-left: var(--space-6); position: relative; max-width: none; }
+    .sim-lens__questions li::before { content: '→'; position: absolute; left: 0; color: var(--tpc-blue); font-family: var(--font-display); font-weight: 600; }
+    @media (max-width: 768px) { .sim-lens { grid-template-columns: 1fr; gap: var(--space-10); } }
+
+    /* SECTION 3 — OS CARDS */
+    .os-section__intro { max-width: 64ch; font-family: var(--font-body); font-size: var(--text-base); color: var(--color-text-secondary); line-height: 1.8; margin-bottom: var(--space-12); }
+    .os-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); }
+    .os-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; transition: box-shadow var(--transition-fast), transform var(--transition-fast); }
+    .os-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .os-card__accent { height: 4px; }
+    .os-card--survival .os-card__accent { background: var(--tpc-orange); }
+    .os-card--conscious .os-card__accent { background: var(--tpc-blue); }
+    .os-card__body { padding: var(--space-8); }
+    .os-card__mode { font-family: var(--font-display); font-weight: 500; font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: var(--space-2); }
+    .os-card--survival .os-card__mode { color: var(--tpc-orange); }
+    .os-card--conscious .os-card__mode { color: var(--tpc-blue); }
+    .os-card__title { font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); text-transform: uppercase; letter-spacing: 0.02em; color: var(--color-text); margin-bottom: var(--space-4); line-height: 1.15; }
+    .os-card__desc { font-family: var(--font-body); font-size: var(--text-sm); color: var(--color-text-secondary); line-height: 1.7; margin-bottom: var(--space-6); }
+    .os-card__traits { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+    .os-card__traits li { font-family: var(--font-body); font-size: var(--text-sm); color: var(--color-text-secondary); padding-left: var(--space-5); position: relative; max-width: none; line-height: 1.5; }
+    .os-card--survival .os-card__traits li::before { content: '•'; position: absolute; left: 0; color: var(--tpc-orange); }
+    .os-card--conscious .os-card__traits li::before { content: '•'; position: absolute; left: 0; color: var(--tpc-blue); }
+    .os-note { margin-top: var(--space-8); padding: var(--space-5) var(--space-6); background: var(--color-surface-inset); border-radius: var(--radius-md); font-family: var(--font-body); font-size: var(--text-sm); color: var(--color-text-secondary); line-height: 1.7; }
+    @media (max-width: 768px) { .os-grid { grid-template-columns: 1fr; } }
+
+    /* SECTION 4 — PARTICIPATION */
+    .participation-section { text-align: center; }
+    .participation-section .section__inner { max-width: var(--content-default); }
+    .participation-section__eyebrow { font-family: var(--font-display); font-weight: 500; font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.14em; color: var(--tpc-yellow); margin-bottom: var(--space-5); }
+    .participation-section__headline { font-family: var(--font-display); font-weight: 700; font-size: var(--text-xl); text-transform: uppercase; letter-spacing: 0.02em; color: #FFFFFF; line-height: 1.15; margin-bottom: var(--space-8); }
+    .participation-section__body { font-family: var(--font-body); font-size: var(--text-lg); font-weight: 300; color: rgba(255,255,255,0.75); line-height: 1.8; max-width: 60ch; margin: 0 auto var(--space-8); }
+    .participation-section__callout { font-family: var(--font-accent); font-size: var(--text-base); color: rgba(255,255,255,0.5); line-height: 1.6; }
+    @media (max-width: 768px) {
+      .participation-section__headline { font-size: var(--text-xl); }
+      .participation-section__body { font-size: var(--text-base); }
+    }
+
+    /* SECTION 5 — INFRASTRUCTURE */
+    .infrastructure__headline { font-family: var(--font-display); font-weight: 700; font-size: var(--text-xl); text-transform: uppercase; letter-spacing: 0.02em; color: var(--color-text); margin-bottom: var(--space-6); line-height: 1.15; }
+    .infrastructure__body { font-family: var(--font-body); font-size: var(--text-base); color: var(--color-text-secondary); line-height: 1.8; max-width: 64ch; margin-bottom: var(--space-10); }
+    .infrastructure__body p + p { margin-top: var(--space-5); }
+    .infrastructure__roles { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-10); }
+    .role-card { padding: var(--space-8); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+    .role-card__number { font-family: var(--font-display); font-weight: 700; font-size: var(--text-2xl); color: var(--color-divider); line-height: 1; margin-bottom: var(--space-4); }
+    .role-card__role { font-family: var(--font-display); font-weight: 600; font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text); margin-bottom: var(--space-3); }
+    .role-card__desc { font-family: var(--font-body); font-size: var(--text-sm); color: var(--color-text-secondary); line-height: 1.7; }
+    @media (max-width: 768px) { .infrastructure__roles { grid-template-columns: 1fr; } }
+
+    /* CTA SECTION */
+    .cta-section { background: var(--color-surface); border-top: 1px solid var(--color-divider); }
+    .cta-section__inner { max-width: var(--content-default); margin: 0 auto; text-align: center; }
+    .cta-section__headline { font-family: var(--font-display); font-weight: 700; font-size: var(--text-xl); text-transform: uppercase; letter-spacing: 0.02em; color: var(--color-text); margin-bottom: var(--space-4); line-height: 1.15; }
+    .cta-section__body { font-family: var(--font-body); font-size: var(--text-base); color: var(--color-text-secondary); line-height: 1.7; max-width: 52ch; margin: 0 auto var(--space-10); }
+    .cta-section__actions { display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; }
+
+    /* FOOTER */
+    .site-footer {
+      border-top: 3px solid transparent;
+      border-image: linear-gradient(90deg, var(--tpc-red), var(--tpc-orange), var(--tpc-yellow), var(--tpc-blue), var(--tpc-dark-blue)) 1;
+      padding: var(--space-16) var(--space-6) var(--space-8); background: var(--color-surface);
+    }
+    .site-footer__inner { max-width: var(--content-wide); margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: var(--space-12); align-items: start; }
+    .footer-brand__logo img { height: 80px; width: auto; margin-bottom: var(--space-4); }
+    .footer-brand__tagline { font-family: var(--font-accent); font-size: var(--text-base); color: var(--color-text-secondary); }
+    .footer-nav { display: flex; flex-direction: column; gap: var(--space-6); align-items: flex-end; }
+    .footer-nav__links { display: flex; list-style: none; gap: var(--space-5); }
+    .footer-nav__link { font-family: var(--font-display); font-weight: 500; font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-secondary); transition: color var(--transition-fast); }
+    .footer-nav__link:hover { color: var(--color-text); }
+    .footer-social { display: flex; gap: var(--space-4); }
+    .footer-social__icon { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: var(--radius-full); background: var(--color-surface-inset); color: var(--color-text-secondary); transition: all var(--transition-fast); }
+    .footer-social__icon:hover { background: var(--color-depth); color: #FFF; }
+    .footer-social__icon svg { width: 16px; height: 16px; }
+    .footer-bottom { max-width: var(--content-wide); margin: var(--space-12) auto 0; padding-top: var(--space-6); border-top: 1px solid var(--color-divider); display: flex; flex-direction: column; gap: var(--space-3); }
+    .footer-legal { font-size: var(--text-xs); color: var(--color-text-tertiary); }
+    .footer-disclaimer { font-size: var(--text-xs); color: var(--color-text-tertiary); max-width: 72ch; line-height: 1.5; }
+    @media (max-width: 768px) {
+      .site-footer__inner { grid-template-columns: 1fr; gap: var(--space-8); }
+      .footer-nav { align-items: flex-start; }
+      .footer-nav__links { flex-wrap: wrap; }
+    }
+
+    /* SCROLL REVEAL */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  </style>
+  <script>(function(){var h=window.location.hostname;if(h==='thepassioncompany.org'||h==='www.thepassioncompany.org'){if(window.location.protocol!=='https:'){window.location.replace('https://'+window.location.host+window.location.pathname+window.location.search);}}}());</script>
+</head>
+<body>
+
+{{header}}
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero__inner">
+      <p class="page-hero__eyebrow">The Framework</p>
+      <h1 class="page-hero__headline">Imagination<br>Technology</h1>
+      <p class="page-hero__subhead">An experimental framework for investigating how you participate in the experience of being alive.</p>
+      <p class="page-hero__note">Working hypotheses. Testable lenses. Voluntary and reversible.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 1 — WHAT IT IS -->
+  <section class="section">
+    <div class="section__inner">
+      <div class="tags">
+        <span class="tag tag--red">Framework</span>
+        <span class="tag tag--blue">Experimental</span>
+      </div>
+      <hr class="divider--accent" />
+      <h2 class="what-it-is__headline reveal">What It Is</h2>
+      <div class="what-it-is__body reveal">
+        <p>Imagination Technology is not philosophy. It is not a belief system. It is not a psychological method.</p>
+        <p>It functions as a working experimental framework for investigating participation within lived experience. Rather than asserting truths about reality, Imagination Technology introduces testable lenses through which individuals may explore how perception, identity, imagination, and experience organize.</p>
+        <p>Nothing in this framework requires agreement or adoption. Concepts are intended to be tested through lived interaction and revised through ongoing discovery.</p>
+      </div>
+      <div class="what-it-is__invitation reveal">
+        <p>Each lens begins with a simple invitation:<br><strong>Imagine if this were true — and observe what changes.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 — THE SIMULATION LENS -->
+  <section class="section section--surface" id="simulation-lens">
+    <div class="section__inner">
+      <div class="sim-lens">
+        <div class="sim-lens__content reveal">
+          <p class="sim-lens__label">Lens One</p>
+          <hr class="divider--accent" />
+          <h2 class="sim-lens__headline">The Simulation Lens</h2>
+          <div class="sim-lens__body">
+            <p>One usability model within Imagination Technology approaches reality <em>as if</em> it functions like an interactive simulation.</p>
+            <p>This is not a metaphysical claim about the nature of reality. It is not a belief system requiring adoption. The Simulation Lens operates as a usability model — a way of interacting with experience that increases clarity, experimentation, and conscious participation.</p>
+            <p>Human beings already engage experience through models, assumptions, and interpretations. The Simulation Lens makes this interpretive activity explicit — and usable. It does not introduce a new condition. It makes visible one that is already present.</p>
+            <p>Within this posture, experience becomes navigable rather than personal. Participation becomes observable rather than assumed.</p>
+          </div>
+        </div>
+        <div class="sim-lens__questions reveal">
+          <p class="sim-lens__questions-title">Questions the Lens Opens</p>
+          <ul>
+            <li>What happens when attention moves?</li>
+            <li>How does interpretation influence experience?</li>
+            <li>Which responses arise automatically?</li>
+            <li>Which responses become available through awareness?</li>
+            <li>How does imagination alter perceived possibility?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — SURVIVAL OS / CONSCIOUS OS -->
+  <section class="section" id="operating-modes">
+    <div class="section__inner">
+      <hr class="divider--accent" />
+      <h2 class="what-it-is__headline reveal">Two Descriptive Modes</h2>
+      <p class="os-section__intro reveal">Within the Simulation Lens, two recognizable operating modes become visible. These are descriptive observations — not diagnoses, not identities, not hierarchies. Individuals move fluidly between them.</p>
+      <div class="os-grid">
+        <div class="os-card os-card--survival reveal">
+          <div class="os-card__accent"></div>
+          <div class="os-card__body">
+            <p class="os-card__mode">Mode One</p>
+            <h3 class="os-card__title">Survival OS</h3>
+            <p class="os-card__desc">Characterized by urgency, threat interpretation, identity defense, and automatic reaction shaped by inherited survival-patterning. Adaptive and protective — not broken.</p>
+            <ul class="os-card__traits">
+              <li>Uncertainty collapses into threat</li>
+              <li>Identity becomes defended automatically</li>
+              <li>Reactions precede awareness</li>
+              <li>Experience feels fixed and personal</li>
+              <li>Participation becomes invisible</li>
+            </ul>
+          </div>
+        </div>
+        <div class="os-card os-card--conscious reveal">
+          <div class="os-card__accent"></div>
+          <div class="os-card__body">
+            <p class="os-card__mode">Mode Two</p>
+            <h3 class="os-card__title">Conscious OS</h3>
+            <p class="os-card__desc">Characterized by awareness, curiosity, voluntary experimentation, and expanded navigability within experience. Not an achievement — a recognizable shift in relationship.</p>
+            <ul class="os-card__traits">
+              <li>Thoughts noticed without immediate identification</li>
+              <li>Emotions experienced without defining identity</li>
+              <li>Imagination available as exploration</li>
+              <li>Uncertainty becomes navigable</li>
+              <li>Participation becomes visible</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="os-note reveal">
+        <strong>Note:</strong> TPC does not position one mode as morally superior to another. Survival OS protects continuity. Conscious OS expands navigability. The distinction exists only to support recognition — not as a goal, hierarchy, or identity.
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — PARTICIPATION (DARK PULL-QUOTE) -->
+  <section class="section section--dark participation-section" id="participation">
+    <div class="section__inner">
+      <p class="participation-section__eyebrow">Core Concept</p>
+      <h2 class="participation-section__headline">Participation</h2>
+      <p class="participation-section__body">The activity through which perception, interpretation, imagination, and action continuously influence how experience unfolds. Human beings are always participating — whether consciously recognized or not.</p>
+      <p class="participation-section__body">When identification occurs, participation becomes invisible. Experience feels fixed, personal, and unavoidable. When participation becomes visible, experience begins to feel less like something happening <em>to</em> you and more like something unfolding <em>through</em> participation.</p>
+      <p class="participation-section__callout">Participation precedes change. Freedom is mobility of awareness within experience.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — INFRASTRUCTURE STATEMENT -->
+  <section class="section" id="infrastructure">
+    <div class="section__inner">
+      <hr class="divider--accent" />
+      <h2 class="infrastructure__headline reveal">TPC Builds the Infrastructure.<br>You Conduct the Exploration.</h2>
+      <div class="infrastructure__body reveal">
+        <p>The Passion Company does not prescribe outcomes, improve individuals, or define fulfillment. TPC constructs environments — including systems such as iSELF — where exploration can occur through voluntary interaction, observation, and experimentation.</p>
+        <p>The founders participate alongside participants as ongoing investigators rather than instructors or authorities. Knowledge within TPC develops through shared experimentation and lived discovery.</p>
+      </div>
+      <div class="infrastructure__roles">
+        <div class="role-card reveal">
+          <p class="role-card__number">01</p>
+          <p class="role-card__role">TPC Builds</p>
+          <p class="role-card__desc">The infrastructure. Environments designed for investigation — not instruction.</p>
+        </div>
+        <div class="role-card reveal">
+          <p class="role-card__number">02</p>
+          <p class="role-card__role">You Explore</p>
+          <p class="role-card__desc">The participant conducts the exploration. Outcomes remain self-determined.</p>
+        </div>
+        <div class="role-card reveal">
+          <p class="role-card__number">03</p>
+          <p class="role-card__role">Voluntary &amp; Reversible</p>
+          <p class="role-card__desc">Participation is voluntary. No worldview adoption or belief agreement is required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="section cta-section">
+    <div class="cta-section__inner">
+      <h2 class="cta-section__headline reveal">Explore the Environment</h2>
+      <p class="cta-section__body reveal"><span class="brand-iself">iSELF</span> is TPC's primary exploration environment — built for investigating how awareness, imagination, and participation interact in lived experience.</p>
+      <div class="cta-section__actions reveal">
+        <a href="/iself.html" class="btn btn--primary btn--lg">Explore <span class="brand-iself">iSELF</span></a>
+        <a href="/" class="btn btn--outline btn--lg">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+{{footer}}
+
+{{scripts}}
+
+</body>
+</html>

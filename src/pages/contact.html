@@ -1,0 +1,189 @@
+<!-- CONFIG {
+  "output": "contact.html",
+  "active": "contact"
+} -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — The Passion Company</title>
+  <meta name="description" content="If something here landed and you want to say so, ask something, or explore a collaboration — this is the place." />
+  <link rel="canonical" href="https://www.thepassioncompany.org/contact.html" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.thepassioncompany.org/contact.html" />
+  <meta property="og:title" content="Contact — The Passion Company" />
+  <meta property="og:description" content="If something here landed and you want to say so, ask something, or explore a collaboration — this is the place." />
+  <meta property="og:image" content="https://www.thepassioncompany.org/assets/hero-homepage.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact — The Passion Company" />
+  <meta name="twitter:description" content="If something here landed and you want to say so, ask something, or explore a collaboration — this is the place." />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="assets/favicon-16.png" type="image/png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Oswald:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Oswald:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    {{shared_css}}
+
+    /* =========================================================
+       PAGE-SPECIFIC: CONTACT
+       ========================================================= */
+    .page-main { min-height: calc(100dvh - 8rem); }
+
+    .contact-section {
+      padding: var(--space-32) var(--space-6) var(--space-32);
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .contact-eyebrow {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-text-tertiary);
+      margin-bottom: var(--space-4);
+    }
+    .contact-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: var(--text-2xl);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--color-text);
+      line-height: 1;
+      margin-bottom: var(--space-6);
+    }
+    .contact-intro {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      margin-bottom: var(--space-10);
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+    .contact-footer-note {
+      font-family: var(--font-accent);
+      font-size: var(--text-sm);
+      color: var(--color-text-tertiary);
+      line-height: 1.5;
+      margin-top: var(--space-4);
+    }
+    .contact-success {
+      display: none;
+      padding: var(--space-8);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      text-align: center;
+    }
+    .contact-success.is-visible { display: block; }
+    .contact-success__title {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: var(--text-lg);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--color-text);
+      margin-bottom: var(--space-3);
+    }
+    .contact-success__body {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--color-text-secondary);
+    }
+  </style>
+  <script>(function(){var h=window.location.hostname;if(h==='thepassioncompany.org'||h==='www.thepassioncompany.org'){if(window.location.protocol!=='https:'){window.location.replace('https://'+window.location.host+window.location.pathname+window.location.search);}}}());</script>
+</head>
+<body>
+
+{{header}}
+
+  <main class="page-main">
+    <section class="contact-section">
+      <div class="reveal">
+        <p class="contact-eyebrow">Get in Touch</p>
+        <h1 class="contact-title">Contact</h1>
+        <p class="contact-intro">
+          If something here landed and you want to say so, ask something,
+          or explore a collaboration — this is the place.
+        </p>
+      </div>
+
+      <div class="contact-success reveal" id="contactSuccess">
+        <p class="contact-success__title">Sent.</p>
+        <p class="contact-success__body">We read everything. We'll be in touch.</p>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="name">Name</label>
+          <input class="form-input" type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">What's on your mind?</label>
+          <textarea class="form-input form-textarea" id="message" name="message" placeholder="No wrong answers." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg" id="contactSubmit">Send It</button>
+      </form>
+
+      <p class="contact-footer-note reveal">We read everything. We respond when we can. No pitch decks, please.</p>
+    </section>
+  </main>
+
+{{footer}}
+
+{{scripts}}
+  <script>
+    /* Contact form → Web3Forms (server-side delivery, no mail client) */
+    (function() {
+      var form = document.getElementById('contactForm');
+      var success = document.getElementById('contactSuccess');
+      var submitBtn = document.getElementById('contactSubmit');
+      if (!form) return;
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        var name = form.querySelector('#name').value.trim();
+        var email = form.querySelector('#email').value.trim();
+        var message = form.querySelector('#message').value.trim();
+        if (!email || !message) {
+          if (!email) form.querySelector('#email').focus();
+          else form.querySelector('#message').focus();
+          return;
+        }
+        submitBtn.disabled = true; submitBtn.textContent = 'Sending...';
+        try {
+          var res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({ access_key: '2ccd8b33-d243-4243-8314-e6a20d6399b9', name: name, email: email, message: message, subject: 'New message from thepassioncompany.org' })
+          });
+          if (res.ok) {
+            form.style.display = 'none';
+            var note = document.querySelector('.contact-footer-note');
+            if (note) note.style.display = 'none';
+            success.classList.add('is-visible');
+          } else { throw new Error('Status ' + res.status); }
+        } catch(err) {
+          submitBtn.disabled = false; submitBtn.textContent = 'Send It';
+          alert('Something went wrong. Please email us directly at contact@thepassioncompany.org.');
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
